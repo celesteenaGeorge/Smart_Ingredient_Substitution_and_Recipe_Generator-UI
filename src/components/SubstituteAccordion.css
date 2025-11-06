@@ -1,0 +1,77 @@
+
+.accordion-container {
+  width: 60%;
+  margin: 2rem auto;
+  background-color: #f9fafb;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-container h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+
+.accordion-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.accordion-card:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 1rem;
+  background-color: #f1f5f9;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1f2937;
+}
+
+.accordion-card.expanded .accordion-header {
+  background-color: #e0e7ff;
+}
+
+.accordion-content {
+  padding: 0.9rem 1rem;
+  background-color: #f9fafb;
+  border-top: 1px solid #ddd;
+  color: #374151;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  transition: all 0.3s ease-in-out;
+}
+
+.generate-btn {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  margin-top: 0.6rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.generate-btn:hover {
+  background-color:#059669;
+}
+
+.generate-btn:active {
+  transform: scale(0.98);
+}
+
