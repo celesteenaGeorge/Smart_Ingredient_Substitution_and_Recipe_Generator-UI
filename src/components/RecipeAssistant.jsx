@@ -69,18 +69,15 @@ const RecipeAssistant = () => {
       allergens: allergiesString,
       recipeContext,
     };
-    try{ const response = await axios.post(
-      "http://localhost:8080/api/substitute",
-      requestData
-    );
-    setSubstitutions(response.data.substitutions || []);
+    try {
+      const response = await axios.post("/api/substitute", requestData);
+      setSubstitutions(response.data.substitutions || []);
 
-    console.log(response.data);
-    console.log("Validation passed — API call completed");}
-catch (error) {
+      console.log(response.data);
+      console.log("Validation passed — API call completed");
+    } catch (error) {
       console.error("Error generating recipe:", error);
     }
-   
   };
   const handleGenerateRecipeFromSubstitute = async (selectedSubstitute) => {
     console.log("Generating recipe using substitute:", selectedSubstitute);
@@ -96,13 +93,10 @@ catch (error) {
     };
 
     try {
-      const response = await axios.post(
-        "http://localhost:8080/api/getRecipe",
-        requestData
-      );
+      const response = await axios.post("/api/getRecipe", requestData);
 
       console.log("Generated Recipe:", response.data);
-       setGeneratedRecipe(response.data);
+      setGeneratedRecipe(response.data);
     } catch (error) {
       console.error("Error generating recipe:", error);
     }
